@@ -15,3 +15,26 @@ const App: React.FC = () => {
     "strip",
     "strip",
   ]);
+ const handleLengthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLength(parseInt(e.target.value));
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, checked } = e.target;
+    switch (id) {
+      case "uppercase":
+        setUppercase(checked);
+        break;
+      case "lowercase":
+        setLowercase(checked);
+        break;
+      case "numbers":
+        setNumbers(checked);
+        break;
+      case "symbols":
+        setSymbols(checked);
+        break;
+      default:
+        break;
+    }
+  };
