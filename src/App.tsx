@@ -151,3 +151,28 @@ const copyToClipboard = () => {
           value={length}
           onChange={handleLengthChange}
         />
+<div className="checkbox-group">
+          <input
+            type="checkbox"
+            id="uppercase"
+            checked={uppercase}
+            onChange={handleCheckboxChange}
+          />
+          <label htmlFor="uppercase">Include Uppercase Letters</label>
+        </div>
+        <div className="checkbox-group">
+          <input
+            type="checkbox"
+            id="lowercase"
+            checked={lowercase}
+            onChange={handleCheckboxChange}
+          />
+          <label htmlFor="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div className="checkbox-group">
+          <input
+            type="checkbox"
+            id="numbers"
+            checked={numbers}
+            onChange={handleCheckboxChange}
+          />
