@@ -38,3 +38,11 @@ const App: React.FC = () => {
         break;
     }
   };
+const generatePassword = () => {
+    // Check if any checkbox is selected and length is set
+    if ((!uppercase && !lowercase && !numbers && !symbols) || length === 0) {
+      alert(
+        "Please select at least one character type and set the password length."
+      );
+      return;
+    }
