@@ -156,3 +156,22 @@ h1 {
   color: #28a745;
   margin-left: 80px;
 }
+
+button#generate {
+  background-color: #a4ffaf;
+  border: none;
+  padding: 10px;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+button#generate:hover {
+  background-color: #ffffff;
+}
+
+#generate svg {
+  margin-left: 10px;
+}
