@@ -16,3 +16,24 @@ body {
   text-align: center;
   width: 300px;
 }
+
+.character {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character #length-value {
+  color: #a4ffaf;
+  font-size: 25px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #a4ffaf;
+}
