@@ -65,3 +65,25 @@ h1 {
   outline: none;
   font-size: 1.2em;
 }
+
+.password-output button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.options {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.options input[type="range"] {
+  width: 100%;
+  accent-color: #a4ffaf;
+}
