@@ -1,30 +1,27 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Password Generator App
+This repository contains the source code for a password generator web application built with TypeScript, React, and styled components.
+Project Overview:
+This project aims to create a user-friendly password generator that allows users to:
+• Generate strong passwords based on customizable criteria (length, character types).
+• Copy generated passwords to the clipboard for easy use.
+• View a strength rating for their generated password.
+• Enjoy a responsive design that adapts to different screen sizes.
+• Experience intuitive interactions with clear hover and focus states.
 
-Currently, two official plugins are available:
+Technologies Used:
+TypeScript: For type-safe and maintainable code.
+React: A JavaScript library for building user interfaces.
+Styled-components: A CSS-in-JS library for styling React components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Getting Started:
+Clone the repository:
+git clone https://github.com/Abugbire10/password-generator-app.git
+Use code with caution.
 
-## Expanding the ESLint configuration
+Deployment:
+This project is deployed using Vercel. You can access the live demo at (https://password-generator-app-umber.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+License:
+This project is licensed under the AMALITECH License.
