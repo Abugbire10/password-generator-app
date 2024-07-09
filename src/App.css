@@ -137,3 +137,22 @@ h1 {
 .strip.medium {
   background-color: #ffc107;
 }
+
+.strip.strong {
+  background-color: #28a745;
+}
+
+#strength-label.weak {
+  color: #ff0000;
+  margin-left: 100px;
+}
+
+#strength-label.medium {
+  color: #d3a418;
+  margin-left: 80px;
+}
+
+#strength-label.strong {
+  color: #28a745;
+  margin-left: 80px;
+}
