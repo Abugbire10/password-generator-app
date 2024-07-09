@@ -15,7 +15,7 @@ const App: React.FC = () => {
     "strip",
     "strip",
   ]);
- const handleLengthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleLengthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLength(parseInt(e.target.value));
   };
 
@@ -38,7 +38,7 @@ const App: React.FC = () => {
         break;
     }
   };
-const generatePassword = () => {
+  const generatePassword = () => {
     // Check if any checkbox is selected and length is set
     if ((!uppercase && !lowercase && !numbers && !symbols) || length === 0) {
       alert(
@@ -46,7 +46,7 @@ const generatePassword = () => {
       );
       return;
     }
-const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowerChars = "abcdefghijklmnopqrstuvwxyz";
     const numberChars = "0123456789";
     const symbolChars = "!@#$%^&*()_+~|}{[]:;?><,./-=";
@@ -67,7 +67,7 @@ const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     updateStrength(newPassword);
   };
 
-const copyToClipboard = () => {
+  const copyToClipboard = () => {
     if (password.length === 0) {
       alert("Please generate a password first.");
       return;
@@ -97,7 +97,7 @@ const copyToClipboard = () => {
         "strip inactive",
         "strip inactive",
       ]);
-} else if (strength < 3) {
+    } else if (strength < 3) {
       setStrengthLabel("WEAK");
       setStrengthClasses([
         "strip weak",
@@ -124,7 +124,7 @@ const copyToClipboard = () => {
     }
   };
 
-   return (
+  return (
     <div className="container">
       <h3>Password Generator</h3>
       <div className="password-output">
@@ -151,7 +151,7 @@ const copyToClipboard = () => {
           value={length}
           onChange={handleLengthChange}
         />
-<div className="checkbox-group">
+        <div className="checkbox-group">
           <input
             type="checkbox"
             id="uppercase"
@@ -176,3 +176,40 @@ const copyToClipboard = () => {
             checked={numbers}
             onChange={handleCheckboxChange}
           />
+          <label htmlFor="numbers">Include Numbers</label>
+        </div>
+        <div className="checkbox-group">
+          <input
+            type="checkbox"
+            id="symbols"
+            checked={symbols}
+            onChange={handleCheckboxChange}
+          />
+          <label htmlFor="symbols">Include Symbols</label>
+        </div>
+      </div>
+      <div className="strength">
+        <label className="strength-label">
+          <span>STRENGTH</span>
+          <span> {strengthLabel}</span>
+        </label>
+        <div id="strength-indicator">
+          {strengthClasses.map((className, index) => (
+            <div key={index} className={className}></div>
+          ))}
+        </div>
+      </div>
+      <button id="generate" onClick={generatePassword}>
+        Generate
+        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#24232C"
+            d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+          />
+        </svg>
+      </button>
+    </div>
+  );
+};
+
+export default App;
