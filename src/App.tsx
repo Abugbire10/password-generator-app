@@ -97,3 +97,29 @@ const copyToClipboard = () => {
         "strip inactive",
         "strip inactive",
       ]);
+} else if (strength < 3) {
+      setStrengthLabel("WEAK");
+      setStrengthClasses([
+        "strip weak",
+        "strip weak",
+        "strip inactive",
+        "strip inactive",
+      ]);
+    } else if (strength < 4) {
+      setStrengthLabel("MEDIUM");
+      setStrengthClasses([
+        "strip medium",
+        "strip medium",
+        "strip medium",
+        "strip inactive",
+      ]);
+    } else {
+      setStrengthLabel("STRONG");
+      setStrengthClasses([
+        "strip strong",
+        "strip strong",
+        "strip strong",
+        "strip strong",
+      ]);
+    }
+  };
